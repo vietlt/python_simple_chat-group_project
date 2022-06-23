@@ -11,8 +11,7 @@
 2. Methods:
 
    a. `GET /<room>` - returns the static html provided to you, regardless of the room provided.  
-   b. `GET /chat/<room>` - returns the full chat in a room  
-   data is load from file `/data/<room>.txt` and show the page  
+   b. `GET /chat/<room>` - returns the full chat in a room, data is load from file `/data/<room>.txt` and show the page  
    c. `POST /chat/<room>` - accepts a chat line from a user
 
    - save to file `/data/<room>.txt`
@@ -48,5 +47,7 @@
    d. Make this work with arbitrary scaling, i.e. 1 nginx and several chat servers as defined by docker-compose "scale" parameter.  
     Note that in the case of --scale, it is good enough if the UI just shows any indication that differs between servers. It does not have to be "friendly"
 
-5. Bonus Section
+5. Bonus Section  
    Replace the file based storage with a dockerized MySQL.
+
+Implement as much as you can. Goodluck!!!
