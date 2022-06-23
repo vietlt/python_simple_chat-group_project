@@ -10,9 +10,9 @@
 
 2. Methods:
 
-   a. `GET /<room>` - returns the static html provided to you, regardless of the room provided.
+   a. `GET /<room>` - returns the static html provided to you, regardless of the room provided.  
    b. `GET /chat/<room>` - returns the full chat in a room  
-   data is load from file `/data/<room>.txt` and show the page
+   data is load from file `/data/<room>.txt` and show the page  
    c. `POST /chat/<room>` - accepts a chat line from a user
 
    - save to file `/data/<room>.txt`
@@ -30,11 +30,15 @@
    d. Implement `POST /chat/<room>` to save chat data. Check with another room and another browser.
 
 4. DevOps Section  
-   a. Package application in docker-image  
-   b. Create docker-compose toplogy comprising of:
+    a. Package application in docker-image  
+    b. Create docker-compose toplogy comprising of:
 
    - 3 chat servers
-   - nginx container configured to load balance the 3 instances and expose them on port 80. NOTE that you do not need to expose ports for any of the 3 servers!
+   - nginx container configured to load balance the 3 instances and expose them on port 80.  
+      NOTE that you do not need to expose ports for any of the 3 servers!  
+      You can read about nginx load balancing at  
+     https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/ and https://www.nginx.com/resources/wiki/start/topics/examples/loadbalanceexample/  
+     or just google it :-)
 
    c. Test and prove that:
 
@@ -42,11 +46,7 @@
    - A chat message sent to one is visible on the others
 
    d. Make this work with arbitrary scaling, i.e. 1 nginx and several chat servers as defined by docker-compose "scale" parameter.  
-   Note that in the case of --scale, it is good enough if the UI just shows any indication that differs between servers. It does not have to be "friendly"
-
-You can read about nginx load balancing at  
-https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/ and https://www.nginx.com/resources/wiki/start/topics/examples/loadbalanceexample/  
-or just google it :-)
+    Note that in the case of --scale, it is good enough if the UI just shows any indication that differs between servers. It does not have to be "friendly"
 
 5. Bonus Section
    Replace the file based storage with a dockerized MySQL.
