@@ -51,3 +51,34 @@
    Replace the file based storage with a dockerized MySQL.
 
 Implement as much as you can. Goodluck!!!
+
+# Nice to have all results
+
+![GET /](./images/1.png)
+![GET /room](./images/2.png)
+![](./images/3.png)
+![](./images/4.png)
+![](./images/5.png)
+![](./images/6.png)
+
+[Test with docker-container]
+
+![](./images/7.png)
+![](./images/8.png)
+![](./images/9.png)
+
+[Test with docker-compose]
+
+![](./images/10.png)
+![](./images/11.png)
+
+[Test with docker-compose --scale]
+
+![](./images/12.png)
+![](./images/13.png)
+![](./images/14.png)
+![](./images/15.png)
+![](./images/16.png)
+![](./images/17.png)
+![](./images/18.png)
+![](./images/19.png)
